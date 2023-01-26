@@ -1,5 +1,4 @@
 // create the team
-const fs = require("fs");
 const generateTeam = team => {
 
     // create the manager html
