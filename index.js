@@ -41,7 +41,11 @@ function askQuestion(){
         },{
             name: "officeNumber",
             type: "input",
-            message: "what is the offic enumber of this manager?",
+            message: "what is the office number of this manager?",
+            default: "1",
+            when: function(answers){
+                answers.team-member === "Manager"
+            }
         }
     ])
 }
