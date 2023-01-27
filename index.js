@@ -1,6 +1,7 @@
 const inquirer = require("inquirer");
 const generateHTML = require("./util/generateHTML");
 const fs = require("fs");
+const path = require("path");
 const Employee = require("./lib/Employee");
 const Engineer = require("./lib/Engineer");
 const Intern = require("./lib/Intern");
@@ -12,32 +13,31 @@ function askQuestion() {
     .prompt([
       {
         name: "question",
-        type: "confirm",
-        message: "would you like to add a team member?"
-      },
-      {
-        name: "teamMember",
         type: "list",
-        message: "what role would you like to add?",
-        choices: ["Intern", "Engineer", "Manager"],
-        when: (answers) => answers.question
-      },
+        message: "would you like to do?",
+        choices: ["add an intern", "add an engineer", "add a manager", "finish building team"]
+      }
     ])
     .then((answers) => {
-      switch (answers.teamMember) {
-        case "Intern":
+      switch (answers.question) {
+        case "add an intern":
           console.log("add Intern");
           addIntern();
           break;
 
-        case "Engineer":
+        case "add an engineer":
           console.log("add Engineer");
           addEngineer();
           break;
 
-        case "Manager":
+        case "add a manager":
           console.log("add Manager");
           addManager();
+          break;
+
+        case "finish building team":
+            console.log("team finished");
+            makePage();
         }
     });
 }
@@ -120,7 +120,7 @@ function addManager(){
     })
 }
 const makePage = () => {
-    fs.writeFile("../dist/index.html", generateHTML(team), (err) =>
+    fs.writeFile("./dist/index.html", generateHTML(team), (err) =>
     err
     ?console.error(err)
     : console.log("your team has been generated"))
