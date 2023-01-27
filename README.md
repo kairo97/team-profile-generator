@@ -28,3 +28,5 @@
         after installing run npm test in the command line
         
         
+### video walkthrough
+        https://www.youtube.com/watch?v=NI_bt2cUBYY
