@@ -2,7 +2,6 @@
 ##  Description
         this project will use command line prompts to generate a HTML file with cards for each team member with details about them
         
-  ## Table of contents
         
         
    ### Installation
