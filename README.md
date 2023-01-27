@@ -2,30 +2,30 @@
 ##  Description
         this project will use command line prompts to generate a HTML file with cards for each team member with details about them
         
-        ## Table of contents
+  ## Table of contents
         
         
-        ## Installation
+   ### Installation
         run npm init in the command line, then run npm i to install required packages, you may have to install individually, if that is the case run npm i inquirer@8.2.4,              npm i path, and npm i jest.
         
-        ## Usage
+   ### Usage
         after install make sure you are in the index.js file command line, then run npm index.js and follow the prompts
         
-        ## Credits
+   ### Credits
         Joe Rehfuss
         
-        ## License
+   ### License
         MIT license
         
-        ## badges
+   ### badges
         undefined
         
-        ## Features
+   ## Features
         node.js, inquirer, path, fs, and jest
-        ## How to contribute
-        undefined
+   ## How to contribute
+        N/A
         
-        ## Tests
+   ## Tests
         after installing run npm test in the command line
         
         
